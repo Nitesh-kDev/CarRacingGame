@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="startScreen">
+        <div id="startBox">
+            <h1>🏎️ CAR RACING GAME 🏎️</h1>
+            <p>Use ← → Arrow Keys to move</p>
+            <p>Press N for Night Mode</p>
+
+            <div id="levelSelect">
+                <p style="margin-bottom: 10px; font-size: 16px;">Choose Difficulty:</p>
+                <button class="levelBtn" id="easyBtn">🟢 Easy</button>
+                <button class="levelBtn" id="mediumBtn">🟡 Medium</button>
+                <button class="levelBtn" id="hardBtn">🔴 Hard</button>
+            </div>
+
+            <button id="startBtn" style="display: none;">START GAME</button>
+            <p style="font-size: 14px; margin-top: 20px; color: #00ff00; opacity: 0.8;">Developed by Nitesh Kumar</p>
+        </div>
+    </div>
+
+    <div id="ui">
+        <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+            <div>🏎️ Score: <span id="score">0</span></div>
+            <div>🏁 High Score: <span id="highScore">0</span></div>
+            <div>💚 Lives: <span id="lives">3</span></div>
+            <div>📈 Difficulty: <span id="difficulty">Easy</span></div>
+            <div>🔥 Combo: <span id="combo">0</span></div>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <div id="gameOverBox">
+            <h1>💥 GAME OVER 💥</h1>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>High Score: <span id="finalHighScore">0</span></p>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+
+    <audio id="engineSound" src="assets/car-engine-sound.mp3" loop></audio>
+    <audio id="crashSound" src="assets/car-crash-sound.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
